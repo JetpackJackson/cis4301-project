@@ -15,4 +15,7 @@ wheels/
 !.gitignore
 !pyproject.toml
 !uv.lock
+# writeup
+!project.pdf
+!project.md
 
