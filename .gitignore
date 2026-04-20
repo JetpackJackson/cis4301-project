@@ -18,4 +18,6 @@ wheels/
 # writeup
 !project.pdf
 !project.md
-
+# screenshots
+!screenshots
+!*.png
