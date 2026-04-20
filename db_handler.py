@@ -1,3 +1,4 @@
+import time
 from MARIADB_CREDS import DB_CONFIG
 from mariadb import connect
 from models.RentalHistory import RentalHistory
@@ -705,3 +706,4 @@ def close_connection():
     # raise NotImplementedError("you must implement this function")
     cur.close()
     conn.close()
+    time.sleep(0.1)
