@@ -143,6 +143,12 @@ def edit_customer(original_customer_id: str = None, new_customer: Customer = Non
             (new_customer.email, cust_sk),
         )
 
+    if new_customer.customer_id is not None:
+        cur.execute(
+            "UPDATE customer SET c_customer_id = ? WHERE c_customer_sk = ?",
+            (new_customer.customer_id, cust_sk),
+        )
+
     if new_customer.address is not None:
         parts = new_customer.address.split(", ")
         if len(parts) >= 3:
